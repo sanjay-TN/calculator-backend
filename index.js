@@ -1,9 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 
-app.get('/', (req, res) => {
-  res.send('Calculator backend is running');
-});
 
 
 const app = express();
