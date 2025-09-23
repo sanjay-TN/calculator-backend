@@ -1,20 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 
-
-
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// simple calculate endpoint
 app.post('/calculate', (req, res) => {
   const { num1, num2, operator } = req.body;
-
-  let result;
   const n1 = parseFloat(num1);
   const n2 = parseFloat(num2);
 
+  let result;
   switch (operator) {
     case '+':
       result = n1 + n2;
